@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# API keys for the Tab 6 multi-model comparison — never commit
+.env
+.streamlit/secrets.toml
+
+# Source PDFs are large + private — exclude from version control
+data/*.pdf
+data/*.xlsx
+
+# OCR cache and exported results
+outputs/.cache/
+outputs/extracted_takeoff.csv
