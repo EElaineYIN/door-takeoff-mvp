@@ -24,7 +24,16 @@ import pandas as pd
 SCHEDULE_SHEET = "A10.2"
 
 # Floor-plan sheets to look for door occurrences on.
-PLAN_SHEET_PATTERNS = [r"^A2\.[1-4]$"]
+#
+# A2.1–A2.4 are the dense architectural floor plans (hexagonal door tags
+# crowded among room numbers, wall-type squares, and grid bubbles — hard
+# for VLMs to disambiguate without prompt engineering).
+#
+# A7.1.1 is the **Signage** sheet (Roof Deck / etc.): same building, but
+# the plan is sparse and each door is marked with a SIGNAGE label such
+# as ``1.11`` or ``7.15`` printed next to a black filled dot at the door
+# swing arc. Much cleaner to detect — used as the polished demo target.
+PLAN_SHEET_PATTERNS = [r"^A2\.[1-4]$", r"^A7\.1\.1$"]
 
 
 def _matches_any(sheet_no: str, patterns: Iterable[str]) -> bool:
