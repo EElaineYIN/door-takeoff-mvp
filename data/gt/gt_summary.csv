@@ -1,0 +1,11 @@
+split,sheet,floor,folder,bbox_count,image_w,image_h
+test,A2.2,Floor 4,A2.2-2,30,728,1308
+test,A2.3,Floor 6,A2.3-2,30,722,1280
+test,A2.4,Floor 7,A2.4,31,692,1290
+test,A7.1.1,RoofDeck,A7.1.1 RoofDeck,3,502,1172
+val,A2.1,Ground,A2.1-1,24,688,1138
+val,A2.1,Floor 2,A2.1-2,32,608,1138
+val,A2.2,Floor 3,A2.2-1,30,754,1286
+val,A2.3,Floor 5,A2.3-1,30,718,1288
+val,A7.1.1,Ground (signage),A7.1.1 Ground,23,672,1304
+val,A7.1.1,Typical (x6),A7.1.1 Typical,28,1728,4032

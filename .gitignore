@@ -3,6 +3,9 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# Office lock files
+~$*
+
 # API keys for the Tab 6 multi-model comparison — never commit
 .env
 .streamlit/secrets.toml

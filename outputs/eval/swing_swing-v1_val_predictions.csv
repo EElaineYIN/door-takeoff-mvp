@@ -1,0 +1,336 @@
+split,folder,sheet,floor,model_key,model,pred_idx,x1,y1,x2,y2,confidence
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,0,149.984,78.522,167.87199999999999,96.73,0.87
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,1,186.448,87.626,202.95999999999998,110.38600000000001,0.86
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,2,365.32800000000003,130.87,377.024,158.18200000000002,0.89
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,3,387.34399999999994,81.93599999999999,405.23199999999997,105.834,0.87
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,4,256.624,118.35199999999999,270.384,136.56,0.85
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,5,314.416,100.14399999999999,326.11199999999997,127.456,0.88
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,6,436.88,218.496,455.456,235.56599999999997,0.87
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,7,462.336,212.806,476.09599999999995,236.70399999999998,0.86
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,8,159.616,299.29400000000004,169.248,316.36400000000003,0.85
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,9,291.712,268.568,302.72,293.604,0.91
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,10,258.688,359.608,270.384,385.78200000000004,0.86
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,11,364.64000000000004,358.47,375.648,383.50600000000003,0.86
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,12,228.41600000000003,425.612,242.176,451.786,0.89
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,13,227.04000000000002,523.48,238.736,547.3779999999999,0.88
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,14,247.67999999999998,492.754,263.504,513.238,0.9
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,15,366.704,419.92199999999997,380.46400000000006,446.096,0.89
+val,A2.1-1,A2.1,Ground,openai,OpenAI gpt-4.1,16,394.224,524.618,405.23199999999997,554.206,0.86
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,0,237.35999999999999,369.85,264.88,415.37,0.55
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,1,237.35999999999999,403.98999999999995,264.88,455.20000000000005,0.55
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,2,337.12,403.98999999999995,364.64000000000004,449.51000000000005,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,3,220.16,523.48,247.67999999999998,569.0,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,4,330.24,495.03,357.76,540.55,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,5,254.56,671.42,282.08,716.94,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,6,426.56,631.59,454.08000000000004,677.11,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,7,227.04000000000002,705.56,254.56,751.08,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,8,264.88,785.2199999999999,292.4,830.74,0.45
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,9,206.4,859.19,233.92000000000002,904.71,0.5
+val,A2.1-1,A2.1,Ground,anthropic,Anthropic Claude Opus 4.8,10,275.2,859.19,302.72,904.71,0.45
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,0,57.76,68.28,79.04,102.42,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,1,117.34400000000001,101.282,137.40800000000002,138.83599999999998,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,2,200.032,102.42,220.704,138.83599999999998,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,3,264.48,102.42,285.76,137.698,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,4,338.656,101.282,360.544,137.698,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,5,401.88800000000003,102.42,423.16799999999995,138.83599999999998,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,6,484.576,102.42,505.248,139.974,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,7,545.376,68.28,566.6560000000001,102.42,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,8,66.88,186.632,87.55199999999999,241.256,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,9,115.52,211.668,136.8,261.74,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,10,204.288,210.53,224.352,261.74,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,11,278.464,212.806,299.13599999999997,261.74,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,12,341.088,210.53,361.152,261.74,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,13,413.44000000000005,212.806,434.11199999999997,258.326,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,14,484.576,211.668,505.248,243.53199999999998,0.86
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,15,71.13600000000001,299.29400000000004,91.80799999999999,339.12399999999997,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,16,125.856,326.606,146.528,370.988,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,17,203.68,326.606,224.96,370.988,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,18,276.64,326.606,299.13599999999997,370.988,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,19,340.48,326.606,361.152,370.988,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,20,412.83200000000005,326.606,433.50399999999996,369.85,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,21,480.32000000000005,326.606,502.20799999999997,370.988,0.86
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,22,71.13600000000001,415.37,91.80799999999999,455.20000000000005,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,23,128.28799999999998,438.13,148.352,481.37399999999997,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,24,204.288,438.13,224.96,480.236,0.88
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,25,280.896,438.13,301.568,480.236,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,26,338.656,438.13,359.936,481.37399999999997,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,27,414.048,438.13,434.71999999999997,481.37399999999997,0.87
+val,A2.1-2,A2.1,Floor 2,openai,OpenAI gpt-4.1,28,479.71200000000005,438.13,500.99199999999996,476.822,0.86
+val,A2.1-2,A2.1,Floor 2,anthropic,Anthropic Claude Opus 4.8,0,218.88,352.78,249.27999999999997,409.68,0.55
+val,A2.1-2,A2.1,Floor 2,anthropic,Anthropic Claude Opus 4.8,1,188.48,409.68,224.96,455.20000000000005,0.5
+val,A2.1-2,A2.1,Floor 2,anthropic,Anthropic Claude Opus 4.8,2,182.4,455.20000000000005,212.79999999999998,500.72,0.5
+val,A2.1-2,A2.1,Floor 2,anthropic,Anthropic Claude Opus 4.8,3,376.96,557.62,413.44000000000005,603.14,0.45
+val,A2.1-2,A2.1,Floor 2,anthropic,Anthropic Claude Opus 4.8,4,200.64000000000001,785.2199999999999,237.12,830.74,0.5
+val,A2.1-2,A2.1,Floor 2,anthropic,Anthropic Claude Opus 4.8,5,231.04,910.4000000000001,267.52,955.92,0.45
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,0,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,1,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,2,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,3,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,4,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,5,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,6,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,7,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,8,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,9,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,10,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,11,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,12,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,13,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,14,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,15,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,16,608.0,1138.0,608.0,1138.0,1.0
+val,A2.1-2,A2.1,Floor 2,gemini,Google Gemini 3.1 Pro Preview,17,608.0,1138.0,608.0,1138.0,1.0
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,0,30.914,1186.978,49.764,1225.558,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,1,86.71000000000001,1185.692,104.80600000000001,1228.1299999999999,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,2,154.57,1183.1200000000001,174.174,1228.1299999999999,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,3,216.398,1180.548,236.002,1226.844,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,4,296.322,1192.122,317.43399999999997,1221.7,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,5,341.562,1202.41,364.936,1235.846,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,6,390.572,1206.268,413.192,1234.56,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,7,429.02599999999995,1186.978,447.876,1225.558,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,8,484.068,1185.692,502.918,1221.7,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,9,551.928,1181.834,571.532,1224.272,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,10,611.494,1188.2640000000001,630.3439999999999,1221.7,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,11,671.814,1188.2640000000001,691.418,1224.272,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,12,100.28200000000001,1113.676,128.934,1150.97,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,13,152.30800000000002,1117.534,180.206,1154.828,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,14,245.05,1111.104,271.44,1149.684,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,15,276.718,1111.104,303.108,1153.542,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,16,343.07,1117.534,373.23,1159.972,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,17,380.016,1107.246,404.144,1150.97,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,18,440.33599999999996,1118.82,465.972,1148.398,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,19,491.608,1108.532,517.998,1147.112,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,20,596.414,1112.39,622.804,1149.684,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,21,628.082,1120.106,655.226,1153.542,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,22,158.34,1058.378,188.5,1104.674,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,23,519.506,1063.522,539.11,1105.96,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,24,261.638,1035.23,282.75,1075.096,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,25,366.444,1027.5140000000001,390.572,1075.096,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,26,456.924,1035.23,477.282,1075.096,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,27,488.59200000000004,1026.228,515.736,1072.524,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,28,165.88,983.79,189.254,1018.5120000000001,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,29,310.64799999999997,978.646,334.776,1012.082,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,30,370.968,979.932,395.85,1018.5120000000001,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,31,429.78,987.648,453.90799999999996,1018.5120000000001,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,32,269.932,919.49,295.568,952.926,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,33,472.004,923.348,496.132,952.926,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,34,312.156,861.62,338.546,901.486,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,35,375.492,868.0500000000001,399.62,905.3439999999999,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,36,427.518,866.764,451.64599999999996,898.914,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,37,364.182,805.036,389.818,850.046,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,38,275.21,799.892,302.35400000000004,830.756,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,39,475.774,801.178,502.918,835.9,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,40,157.58599999999998,779.316,183.976,820.468,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,41,262.392,736.8779999999999,288.028,771.6,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,42,373.23,697.0120000000001,397.358,730.448,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,43,422.994,706.014,445.614,738.164,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,44,481.052,724.0179999999999,507.442,765.17,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,45,153.816,617.28,178.69799999999998,652.002,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,46,210.366,626.282,235.248,659.718,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,47,269.178,599.2760000000001,291.798,627.568,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,48,337.038,600.562,359.65799999999996,628.854,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,49,428.27199999999993,588.988,453.154,626.282,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,50,461.448,595.418,484.822,631.426,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,51,515.736,604.42,539.864,644.286,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,52,593.398,614.708,616.7719999999999,645.572,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,53,662.766,627.568,689.1560000000001,670.006,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,54,167.388,555.552,192.27,587.702,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,55,255.60600000000002,542.692,281.242,572.27,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,56,297.83000000000004,546.55,323.466,581.272,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,57,364.182,531.1179999999999,391.326,569.698,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,58,422.24000000000007,534.976,447.12199999999996,574.842,0.98
+val,A2.2-1,A2.2,Floor 3,openai,OpenAI gpt-4.1,59,534.586,541.406,560.222,565.84,0.98
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,0,377.0,347.22,414.70000000000005,398.66,0.65
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,1,339.3,385.8,377.0,424.38,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,2,444.85999999999996,372.94,475.02,424.38,0.6
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,3,361.91999999999996,552.98,399.62,604.42,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,4,331.76,578.7,369.46,630.14,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,5,377.0,655.86,414.70000000000005,707.3000000000001,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,6,346.84000000000003,733.02,392.08000000000004,784.46,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,7,392.08000000000004,707.3000000000001,429.78,758.74,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,8,444.85999999999996,720.1600000000001,482.56,771.6,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,9,339.3,797.32,377.0,848.76,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,10,444.85999999999996,797.32,482.56,848.76,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,11,324.21999999999997,707.3000000000001,361.91999999999996,758.74,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,12,384.54,874.48,422.24000000000007,925.92,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,13,331.76,925.92,369.46,977.36,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,14,339.3,1003.08,377.0,1054.52,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,15,271.44,591.5600000000001,309.14,643.0,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,16,271.44,720.1600000000001,309.14,771.6,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,17,414.70000000000005,797.32,452.4,848.76,0.45
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,18,271.44,797.32,309.14,848.76,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,Anthropic Claude Opus 4.8,19,369.46,1003.08,407.16,1054.52,0.45
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,0,179.5,33.488,190.27,61.824,0.88
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,1,235.50400000000002,69.55199999999999,245.556,100.464,0.88
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,2,205.34799999999998,114.63199999999999,216.118,139.10399999999998,0.9
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,3,191.70600000000002,151.98399999999998,205.34799999999998,171.304,0.9
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,4,259.916,132.664,269.25,157.136,0.9
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,5,280.02,115.92,292.226,145.544,0.88
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,6,308.022,66.976,319.51,103.04,0.89
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,7,346.07599999999996,121.072,356.128,145.544,0.9
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,8,361.872,154.56,374.796,173.88000000000002,0.88
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,9,406.388,78.568,418.594,104.328,0.88
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,10,459.52,34.775999999999996,470.29,63.112,0.88
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,11,419.31199999999995,114.63199999999999,430.8,137.816,0.9
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,12,440.852,149.40800000000002,450.186,171.304,0.89
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,13,503.318,66.976,514.088,105.616,0.89
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,14,521.986,112.056,534.192,140.392,0.89
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,15,541.372,155.84799999999998,552.86,177.74400000000003,0.89
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,16,128.522,249.872,146.47199999999998,278.20799999999997,0.92
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,17,193.14200000000002,301.392,203.91199999999998,333.592,0.92
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,18,216.118,258.88800000000003,229.042,292.37600000000003,0.92
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,19,270.686,229.26399999999998,280.738,258.88800000000003,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,20,308.022,229.26399999999998,319.51,255.024,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,21,349.666,226.688,362.59,253.73600000000002,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,22,389.156,229.26399999999998,400.64400000000006,253.73600000000002,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,23,418.594,258.88800000000003,430.8,292.37600000000003,0.92
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,24,446.596,301.392,458.084,333.592,0.92
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,25,507.626,251.16,525.576,275.632,0.92
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,26,155.088,397.992,166.57600000000002,430.192,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,27,225.452,418.6,236.94,455.952,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,28,275.712,422.464,287.918,457.23999999999995,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,29,310.894,356.776,323.1,388.976,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,30,355.41,356.776,366.18,388.976,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,31,408.542,419.88800000000003,416.44,453.376,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,32,480.34200000000004,401.856,491.112,431.48,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,33,194.578,588.616,206.784,618.24,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,34,259.198,620.816,269.968,644.0,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,35,440.852,620.816,452.34,645.288,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,36,504.75399999999996,588.616,516.96,616.952,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,37,306.586,656.88,317.356,695.5200000000001,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,38,376.95,656.88,387.72,695.5200000000001,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,39,169.44799999999998,704.5360000000001,180.218,735.448,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,40,241.24800000000002,735.448,254.172,761.208,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,41,282.17400000000004,766.36,294.38,792.12,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,42,332.434,761.208,343.92199999999997,786.968,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,43,404.95199999999994,763.784,418.594,786.968,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,44,455.212,701.96,465.264,735.448,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,45,499.72799999999995,736.736,511.93399999999997,765.072,0.91
+val,A2.3-1,A2.3,Floor 5,openai,OpenAI gpt-4.1,46,551.424,765.072,563.63,794.696,0.91
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,0,276.43,377.38399999999996,300.12399999999997,418.6,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,1,272.84,386.4,294.38,431.48,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,2,287.2,386.4,312.33,437.92,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,3,445.16,553.84,473.88,598.9200000000001,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,4,437.98,573.16,466.7,611.8,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,5,452.34,714.84,477.47,759.92,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,6,420.03,734.16,448.75,785.68,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,7,445.16,882.2800000000001,473.88,927.36,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,8,301.56,714.84,330.28000000000003,759.92,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,9,247.70999999999998,766.36,276.43,811.44,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,10,254.89,895.16,283.61,940.24,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,11,244.12,1004.64,272.84,1049.72,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,12,280.02,1017.5200000000001,308.74,1062.6,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,13,384.13,1004.64,412.84999999999997,1049.72,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,14,398.49,1127.0,427.21,1172.08,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,15,430.8,1127.0,459.52,1172.08,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,16,330.28000000000003,1107.68,359.0,1152.76,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,17,258.48,888.7199999999999,287.2,933.8,0.45
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,18,218.99,399.28,247.70999999999998,444.35999999999996,0.45
+val,A2.3-1,A2.3,Floor 5,anthropic,Anthropic Claude Opus 4.8,19,294.38,502.32,319.51,540.96,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,0,55.104,66.50399999999999,78.62400000000001,100.408,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,1,157.92,66.50399999999999,180.768,100.408,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,2,349.44,67.80799999999999,372.96000000000004,104.32000000000001,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,3,447.552,67.80799999999999,471.74399999999997,103.016,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,4,551.04,67.80799999999999,574.56,103.016,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,5,96.76799999999999,191.688,115.58399999999999,230.808,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,6,239.904,191.688,260.064,230.808,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,7,410.592,192.992,430.752,236.024,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,8,554.4,192.992,573.888,232.112,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,9,200.928,275.144,218.4,311.656,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,10,317.18399999999997,275.144,342.72,310.352,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,11,257.376,306.44,286.272,342.952,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,12,355.488,328.608,379.67999999999995,367.72799999999995,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,13,301.056,362.51200000000006,331.968,396.416,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,14,102.14399999999999,387.28799999999995,129.024,423.8,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,15,200.928,387.28799999999995,227.13600000000002,425.10400000000004,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,16,264.096,417.28000000000003,290.304,456.4,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,17,318.52799999999996,505.952,344.736,543.768,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,18,430.752,474.656,458.30400000000003,511.168,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,19,159.26399999999998,545.072,186.144,581.5840000000001,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,20,477.12,628.528,503.328,667.648,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,21,196.224,736.7599999999999,219.744,775.88,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,22,86.016,768.0559999999999,111.552,805.872,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,23,504.672,903.6719999999999,530.208,940.184,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),openai,OpenAI gpt-4.1,24,88.70400000000001,950.616,112.896,984.52,0.95
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,0,201.6,108.232,231.83999999999997,146.048,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,1,268.8,108.232,299.04,146.048,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,2,460.32000000000005,108.232,493.92,146.048,0.65
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,3,302.40000000000003,319.48,336.0,358.6,0.6
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,4,305.76,319.48,336.0,358.6,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,5,305.76,320.784,342.72,365.12000000000006,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,6,319.2,322.088,349.44,358.6,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,7,460.32000000000005,243.848,483.84,280.36,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,8,288.96,322.088,319.2,358.6,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,9,336.0,328.608,372.96000000000004,365.12000000000006,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,10,369.6,339.04,403.2,378.15999999999997,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,11,359.52000000000004,384.68,389.76,423.8,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,12,336.0,469.44,372.96000000000004,515.08,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,13,329.28,560.72,369.6,619.4,0.6
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,14,309.12,573.76,342.72,638.96,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,15,319.2,567.24,356.16,625.92,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,16,288.96,567.24,329.28,619.4,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,17,325.92,638.96,362.88,697.64,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,18,329.28,749.8,369.6,808.48,0.6
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,19,336.0,815.0,372.96000000000004,867.1600000000001,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,20,302.40000000000003,808.48,342.72,867.1600000000001,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,21,262.08,821.52,302.40000000000003,880.2,0.55
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,22,336.0,749.8,372.96000000000004,808.48,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,23,329.28,645.48,366.24,691.12,0.4
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,24,292.32,867.1600000000001,329.28,919.3199999999999,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,25,477.12,717.2,510.72,775.88,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,26,507.36,762.8399999999999,537.6,815.0,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,27,275.52,899.7599999999999,312.48,951.92,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,Anthropic Claude Opus 4.8,28,282.24,958.4399999999999,315.84,1010.6,0.5
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,0,329.28,365.12000000000006,354.81600000000003,392.50399999999996,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,1,329.28,419.88800000000003,354.81600000000003,448.57599999999996,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,2,265.44,379.464,290.304,401.632,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,3,238.56,698.9440000000001,263.42400000000004,721.1120000000001,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,4,187.48800000000003,688.5120000000001,212.352,723.72,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,5,440.16,798.048,465.02399999999994,833.256,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),gemini,Google Gemini 3.1 Pro Preview,6,545.664,817.608,570.528,852.816,0.8
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,0,336.96000000000004,624.96,393.98400000000004,693.5039999999999,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,1,689.472,612.864,748.224,697.536,0.98
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,2,978.0479999999999,620.928,1035.072,697.536,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,3,1334.016,624.96,1389.3120000000001,693.5039999999999,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,4,603.072,818.4960000000001,670.464,903.168,0.98
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,5,848.448,814.464,915.84,895.104,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,6,412.99199999999996,927.36,471.744,1012.032,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,7,1002.2399999999999,939.456,1059.264,1020.096,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,8,1330.56,959.616,1387.584,1040.256,0.95
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,9,298.94399999999996,947.52,355.96799999999996,1024.128,0.94
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,10,689.472,1205.568,748.224,1278.144,0.98
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,11,978.0479999999999,1213.632,1036.8,1282.176,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,12,608.256,1419.264,675.648,1512.0,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,13,848.448,1423.2959999999998,917.5680000000001,1507.968,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,14,411.264,1536.192,468.288,1620.864,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,15,1000.512,1552.32,1059.264,1620.864,0.97
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,16,1335.7440000000001,1540.224,1391.0400000000002,1620.864,0.95
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,17,300.67199999999997,1544.256,355.96799999999996,1620.864,0.94
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,18,679.104,1733.76,741.312,1810.368,0.95
+val,A7.1.1 Typical,A7.1.1,Typical (x6),openai,OpenAI gpt-4.1,19,990.1439999999999,1737.792,1048.896,1810.368,0.94
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,0,872.64,1632.96,941.7600000000001,1794.24,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,1,855.36,2157.1200000000003,924.48,2318.3999999999996,0.75
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,2,924.48,2237.76,993.5999999999999,2399.04,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,3,1347.8400000000001,2520.0,1416.9599999999998,2681.28,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,4,846.72,2499.84,915.84,2661.1200000000003,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,5,838.0799999999999,3003.84,907.2,3165.1200000000003,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,6,898.5600000000001,3104.64,967.6800000000001,3265.92,0.65
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,7,1054.08,3306.24,1123.2,3467.52,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,8,1244.1599999999999,3366.72,1313.28,3528.0,0.65
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,9,889.9200000000001,1854.72,959.0400000000001,2016.0,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,10,1434.24,1552.32,1503.36,1713.6,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,11,1434.24,2419.2,1503.36,2580.48,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,12,691.2,1612.8000000000002,760.32,1774.08,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,13,691.2,2096.64,760.32,2257.92,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,14,1399.68,1189.4399999999998,1468.8,1350.72,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,15,1365.1200000000001,1451.52,1434.24,1612.8000000000002,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,16,846.72,1391.04,915.84,1552.32,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,17,1010.8799999999999,866.88,1080.0,1028.16,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,18,1010.8799999999999,1028.16,1080.0,1189.4399999999998,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,19,1434.24,866.88,1503.36,1028.16,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,20,864.0,3427.2,933.1200000000001,3588.48,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,21,950.4000000000001,3830.3999999999996,1019.52,3991.68,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,Anthropic Claude Opus 4.8,22,1399.68,3830.3999999999996,1468.8,3991.68,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),gemini,Google Gemini 3.1 Pro Preview,0,760.7749839525943,1786.2385990072473,921.4665104700374,2178.054467979812,0.8
+val,A7.1.1 Typical,A7.1.1,Typical (x6),gemini,Google Gemini 3.1 Pro Preview,1,657.1508438918881,2812.2844217108404,816.8579350249406,3200.5001723426185,0.8
+val,A7.1.1 Typical,A7.1.1,Typical (x6),gemini,Google Gemini 3.1 Pro Preview,2,514.825447388958,2832.5520326476785,667.0099002615602,3239.1561634677855,0.8

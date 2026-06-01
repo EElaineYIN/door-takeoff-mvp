@@ -1,0 +1,130 @@
+split,folder,sheet,floor,model_key,pred_idx,x1,y1,x2,y2,confidence
+val,A2.1-1,A2.1,Ground,anthropic,0,472.0,619.0,487.0,634.0,0.6
+val,A2.1-1,A2.1,Ground,anthropic,1,275.0,574.0,295.0,594.0,0.55
+val,A2.1-1,A2.1,Ground,anthropic,2,428.0,638.0,442.0,652.0,0.55
+val,A2.1-1,A2.1,Ground,anthropic,3,385.0,891.0,407.0,913.0,0.55
+val,A2.1-1,A2.1,Ground,anthropic,4,281.0,621.0,301.0,641.0,0.5
+val,A2.1-1,A2.1,Ground,anthropic,5,231.0,619.0,251.0,639.0,0.45
+val,A2.1-1,A2.1,Ground,anthropic,6,206.0,908.0,225.0,927.0,0.45
+val,A2.1-1,A2.1,Ground,anthropic,7,327.0,900.0,344.0,917.0,0.4
+val,A2.1-2,A2.1,Floor 2,anthropic,0,357.0,532.0,373.0,548.0,0.7
+val,A2.1-2,A2.1,Floor 2,anthropic,1,357.0,647.0,373.0,663.0,0.7
+val,A2.1-2,A2.1,Floor 2,anthropic,2,314.0,811.0,334.0,831.0,0.7
+val,A2.1-2,A2.1,Floor 2,anthropic,3,340.0,811.0,360.0,831.0,0.7
+val,A2.1-2,A2.1,Floor 2,anthropic,4,345.0,526.0,360.0,541.0,0.65
+val,A2.1-2,A2.1,Floor 2,anthropic,5,378.0,899.0,398.0,919.0,0.65
+val,A2.1-2,A2.1,Floor 2,anthropic,6,380.0,298.0,396.0,314.0,0.6
+val,A2.1-2,A2.1,Floor 2,anthropic,7,393.0,518.0,408.0,533.0,0.6
+val,A2.1-2,A2.1,Floor 2,anthropic,8,215.0,251.0,235.0,280.0,0.55
+val,A2.1-2,A2.1,Floor 2,anthropic,9,381.0,369.0,401.0,389.0,0.55
+val,A2.1-2,A2.1,Floor 2,anthropic,10,317.0,535.0,334.0,552.0,0.55
+val,A2.1-2,A2.1,Floor 2,anthropic,11,195.0,879.0,212.0,896.0,0.55
+val,A2.1-2,A2.1,Floor 2,anthropic,12,218.0,338.0,238.0,358.0,0.5
+val,A2.1-2,A2.1,Floor 2,anthropic,13,182.0,807.0,199.0,824.0,0.5
+val,A2.1-2,A2.1,Floor 2,anthropic,14,227.0,362.0,246.0,381.0,0.45
+val,A2.2-1,A2.2,Floor 3,anthropic,0,440.0,761.0,461.0,782.0,0.75
+val,A2.2-1,A2.2,Floor 3,anthropic,1,361.0,1009.0,389.0,1036.0,0.75
+val,A2.2-1,A2.2,Floor 3,anthropic,2,487.0,1009.0,516.0,1036.0,0.75
+val,A2.2-1,A2.2,Floor 3,anthropic,3,410.0,419.0,430.0,439.0,0.7
+val,A2.2-1,A2.2,Floor 3,anthropic,4,418.0,646.0,437.0,665.0,0.7
+val,A2.2-1,A2.2,Floor 3,anthropic,5,387.0,779.0,408.0,800.0,0.7
+val,A2.2-1,A2.2,Floor 3,anthropic,6,363.0,856.0,383.0,876.0,0.7
+val,A2.2-1,A2.2,Floor 3,anthropic,7,450.0,895.0,469.0,914.0,0.7
+val,A2.2-1,A2.2,Floor 3,anthropic,8,450.0,408.0,471.0,429.0,0.65
+val,A2.2-1,A2.2,Floor 3,anthropic,9,507.0,869.0,528.0,890.0,0.65
+val,A2.2-1,A2.2,Floor 3,anthropic,10,524.0,257.0,546.0,279.0,0.6
+val,A2.2-1,A2.2,Floor 3,anthropic,11,338.0,384.0,359.0,405.0,0.6
+val,A2.2-1,A2.2,Floor 3,anthropic,12,501.0,373.0,522.0,397.0,0.6
+val,A2.2-1,A2.2,Floor 3,anthropic,13,446.0,569.0,465.0,588.0,0.6
+val,A2.2-1,A2.2,Floor 3,anthropic,14,514.0,565.0,534.0,585.0,0.6
+val,A2.2-1,A2.2,Floor 3,anthropic,15,418.0,638.0,438.0,660.0,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,16,374.0,697.0,397.0,720.0,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,17,345.0,998.0,379.0,1030.0,0.55
+val,A2.2-1,A2.2,Floor 3,anthropic,18,509.0,341.0,530.0,362.0,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,19,346.0,308.0,371.0,330.0,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,20,349.0,558.0,367.0,576.0,0.5
+val,A2.2-1,A2.2,Floor 3,anthropic,21,322.0,779.0,348.0,808.0,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,0,324.0,764.0,347.0,789.0,0.75
+val,A2.3-1,A2.3,Floor 5,anthropic,1,425.0,999.0,448.0,1025.0,0.75
+val,A2.3-1,A2.3,Floor 5,anthropic,2,390.0,394.0,413.0,417.0,0.7
+val,A2.3-1,A2.3,Floor 5,anthropic,3,328.0,831.0,355.0,860.0,0.7
+val,A2.3-1,A2.3,Floor 5,anthropic,4,382.0,727.0,410.0,755.0,0.7
+val,A2.3-1,A2.3,Floor 5,anthropic,5,390.0,874.0,413.0,900.0,0.7
+val,A2.3-1,A2.3,Floor 5,anthropic,6,289.0,1003.0,311.0,1025.0,0.7
+val,A2.3-1,A2.3,Floor 5,anthropic,7,402.0,419.0,425.0,442.0,0.65
+val,A2.3-1,A2.3,Floor 5,anthropic,8,277.0,232.0,297.0,252.0,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,9,468.0,231.0,489.0,252.0,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,10,390.0,550.0,413.0,573.0,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,11,346.0,758.0,369.0,783.0,0.6
+val,A2.3-1,A2.3,Floor 5,anthropic,12,476.0,301.0,497.0,322.0,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,13,278.0,453.0,296.0,471.0,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,14,446.0,573.0,470.0,597.0,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,15,448.0,365.0,472.0,390.0,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,16,437.0,709.0,458.0,733.0,0.55
+val,A2.3-1,A2.3,Floor 5,anthropic,17,277.0,343.0,297.0,363.0,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,18,286.0,368.0,305.0,387.0,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,19,359.0,613.0,382.0,639.0,0.5
+val,A2.3-1,A2.3,Floor 5,anthropic,20,223.0,368.0,241.0,386.0,0.45
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,0,318.0,108.0,345.0,138.0,0.82
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,1,209.0,696.0,231.0,718.0,0.82
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,2,391.0,108.0,418.0,138.0,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,3,310.0,553.0,336.0,579.0,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,4,209.0,745.0,232.0,768.0,0.8
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,5,518.0,108.0,543.0,133.0,0.78
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,6,318.0,362.0,339.0,383.0,0.75
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,7,383.0,322.0,412.0,351.0,0.72
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,8,200.0,121.0,225.0,146.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,9,347.0,182.0,373.0,208.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,10,310.0,321.0,332.0,343.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,11,310.0,604.0,336.0,630.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,12,360.0,444.0,385.0,469.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,13,316.0,566.0,345.0,595.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,14,536.0,700.0,569.0,737.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,15,418.0,1047.0,447.0,1072.0,0.7
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,16,383.0,182.0,409.0,208.0,0.68
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,17,374.0,374.0,400.0,400.0,0.65
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,18,443.0,1047.0,472.0,1072.0,0.65
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,19,516.0,1047.0,545.0,1072.0,0.65
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,20,207.0,129.0,240.0,158.0,0.6
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,21,312.0,323.0,341.0,356.0,0.6
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,22,327.0,378.0,356.0,411.0,0.6
+val,A7.1.1 Ground,A7.1.1,Ground (signage),anthropic,23,373.0,705.0,383.0,715.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,0,964.0,3780.0,1047.0,3859.0,0.88
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,1,886.0,1471.0,937.0,1522.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,2,1035.0,1735.0,1119.0,1811.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,3,866.0,2254.0,898.0,2286.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,4,1162.0,2561.0,1235.0,2635.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,5,870.0,2807.0,894.0,2831.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,6,1242.0,2915.0,1321.0,2994.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,7,1035.0,3031.0,1082.0,3078.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,8,1111.0,3455.0,1178.0,3522.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,9,1253.0,3436.0,1323.0,3506.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,10,1353.0,3341.0,1449.0,3428.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,11,1363.0,3775.0,1441.0,3861.0,0.85
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,12,1241.0,1887.0,1323.0,1967.0,0.83
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,13,886.0,1597.0,937.0,1648.0,0.82
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,14,1308.0,1735.0,1390.0,1811.0,0.82
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,15,1229.0,2271.0,1270.0,2310.0,0.82
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,16,960.0,2807.0,988.0,2835.0,0.82
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,17,1475.0,1408.0,1506.0,1439.0,0.8
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,18,960.0,2254.0,996.0,2290.0,0.8
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,19,847.0,1737.0,878.0,1770.0,0.78
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,20,1035.0,1967.0,1115.0,2045.0,0.78
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,21,973.0,3247.0,1009.0,3283.0,0.78
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,22,1210.0,2338.0,1253.0,2376.0,0.75
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,23,1475.0,1599.0,1504.0,1628.0,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,24,1035.0,1987.0,1072.0,2024.0,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,25,1002.0,3237.0,1072.0,3315.0,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,26,1351.0,3794.0,1394.0,3837.0,0.7
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,27,864.0,1251.0,888.0,1275.0,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,28,1449.0,2384.0,1504.0,2439.0,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,29,1258.0,3292.0,1308.0,3342.0,0.6
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,30,1475.0,1356.0,1504.0,1385.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,31,1039.0,1740.0,1060.0,1761.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,32,1512.0,1671.0,1551.0,1710.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,33,1062.0,3016.0,1084.0,3038.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,34,1441.0,2844.0,1487.0,2890.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,35,1033.0,3073.0,1057.0,3097.0,0.55
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,36,1475.0,1568.0,1504.0,1597.0,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,37,1037.0,1975.0,1060.0,1998.0,0.5
+val,A7.1.1 Typical,A7.1.1,Typical (x6),anthropic,38,1457.0,1726.0,1496.0,1765.0,0.4

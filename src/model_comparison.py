@@ -282,6 +282,74 @@ PLAN_TILE_COLUMNS = [
 ]
 
 
+# --------------------------------------------------------- swing-door-only path
+#
+# The CEE329 MVP scope reduces "door takeoff" to "count swing doors per floor"
+# — no hexagon detection, no per-mark identification. The model is asked only
+# to find every L-shape on the plan: a straight door-leaf line plus a thin
+# quarter-circle arc inside a wall opening. Bifold / pocket / bypass doors
+# (which lack the visible arc) are intentionally out of scope.
+#
+# Cache namespace is ``swing-v1`` so it does NOT collide with the hexagon /
+# signage prompt cache at ``v3`` — both flavours can coexist on the same image.
+DOOR_PLAN_SWING_PROMPT_VERSION = "swing-v2"
+
+
+def _door_plan_swing_prompt(vocab_block: str = "") -> str:
+    """Swing-door-only detection prompt.
+
+    Used when the takeoff scope is "count every swing-door leaf" without
+    identifying individual marks. Output uses ``mark = "door"`` for every
+    detection, so downstream evaluation can compare counts and bboxes only.
+    """
+    return f"""You are looking at an architectural FLOOR PLAN (or a tile cropped from one). Find every SWING DOOR visible in the image.
+
+CRITICAL — WHAT IS A SWING DOOR
+A swing door is drawn as TWO graphical elements that always appear together inside a wall opening:
+  (a) a STRAIGHT LINE representing the door leaf (the panel itself), roughly as long as the door is wide.
+  (b) a THIN QUARTER-CIRCLE ARC drawn from the hinge end of the wall opening to the tip of the door leaf, showing the swing path.
+
+Together they form an "L-shape with an arc". The arc may be drawn very thin (often just a single hairline) but MUST be visually traceable for the door to count.
+
+Report ONE detection per swing-door LEAF. For a DOUBLE swing door (two leaves drawn mirrored across a center line — common at apartment entries and mechanical rooms), report TWO detections — one per leaf.
+
+DO NOT report any of these — they are NOT swing doors:
+  - **Bifold doors** — drawn as a ZIGZAG of two short panels (chevron). No arc.
+  - **Bypass / sliding doors** — drawn as TWO PARALLEL LINES (sliding tracks). No arc.
+  - **Pocket doors** — drawn as a SINGLE LINE inside a thickened wall (door slides into the wall). No arc.
+  - **Stair direction arrows**, **furniture arcs** (chairs, fans, sinks), **window sashes** (thin lines in openings without an arc).
+
+Rule of thumb: if you cannot visually trace BOTH a straight door-leaf line AND a curved arc within ~50 px of each other inside a wall opening, it is NOT a swing door — skip it.
+
+{vocab_block}Return ONLY this JSON object (no commentary, no markdown fences):
+
+{{
+  "doors": [
+    {{
+      "mark": "door",
+      "bbox": [x1, y1, x2, y2],
+      "confidence": 0.85
+    }}
+  ]
+}}
+
+Where:
+  - ``mark`` is always the literal string ``"door"`` (this scope does not identify per-mark labels).
+  - ``bbox`` is normalized to [0, 1] of THIS image, tightly enclosing ONLY the quarter-circle arc (the curved swing path) — do NOT include the straight door-leaf line that runs along one edge of the arc. The arc's bbox is approximately SQUARE — about one door-width on each side (typically ~25-35 px on a 700-px-wide plan, ~50-70 px on a 1700-px-wide plan):
+      x1, y1 = top-left,    x1 < x2, y1 < y2
+      x2, y2 = bottom-right
+  - ``confidence`` ∈ [0, 1] — your subjective certainty this is a real swing door (leaf + arc).
+
+If no swing doors are visible, return {{"doors": []}}.
+Output must be valid JSON only — no leading or trailing text.
+"""
+
+
+def build_door_swing_prompt() -> str:
+    """Public entry point — return the swing-door-only detection prompt."""
+    return _door_plan_swing_prompt(vocab_block="")
+
+
 def _door_plan_tile_rows(text: str, model_label: str) -> list[dict]:
     """Parse the tile-prompt JSON response into rows for a DataFrame."""
     obj = _extract_json_object(text)
@@ -318,19 +386,44 @@ def _door_plan_tile_rows(text: str, model_label: str) -> list[dict]:
 
 
 # ------------------------------------------------------------------- registry
+#
+# All three "brands" are served through a single OpenAI-compatible gateway
+# (Stanford's inference proxy at ``model.service-inference.ai``). Each model
+# still has its own API key (kept in its own env var), but every request
+# uses the OpenAI Python SDK with ``base_url`` pointing at the proxy.
+INFERENCE_BASE_URL = "https://model.service-inference.ai/v1"
+
 
 @dataclass(frozen=True)
 class ModelSpec:
     key: str            # short id used as cache prefix and dict key
-    label: str          # human label for UI ("OpenAI gpt-4o" etc.)
+    label: str          # human label for UI ("OpenAI gpt-5.5" etc.)
     model_id: str       # exact API model identifier
-    env_var: str        # env var name holding the API key
-    call: Callable[[bytes, str, str], str]  # (image_bytes, prompt, model_id) -> raw text
+    env_var: str        # env var name holding the API key for this model
+    # (image_bytes, prompt, model_id, env_var) -> raw text
+    call: Callable[[bytes, str, str, str], str]
 
 
-def _call_openai(image_bytes: bytes, prompt: str, model_id: str) -> str:
+def _call_inference_proxy(
+    image_bytes: bytes, prompt: str, model_id: str, env_var: str
+) -> str:
+    """Send (prompt + image) to one model via the OpenAI-compatible proxy.
+
+    The proxy mimics OpenAI's Chat Completions API, so the same call shape
+    works for gpt / claude / gemini — only ``model`` and the api key change.
+
+    Note: ``temperature`` is intentionally not sent — claude-opus-4-x rejects
+    any non-default value (HTTP 400 from the proxy). gpt-5.x has the same
+    constraint. Each model uses its provider's default temperature.
+
+    ``max_tokens`` is set high (16384) because gpt-5.x is a reasoning model
+    whose hidden chain-of-thought counts against this budget. With 4096,
+    gpt-5.5 routinely spent 4700+ tokens on reasoning and returned empty
+    content. The other models simply use what they need.
+    """
     from openai import OpenAI  # type: ignore
-    client = OpenAI()
+    api_key = os.environ.get(env_var, "")
+    client = OpenAI(api_key=api_key, base_url=INFERENCE_BASE_URL)
     b64 = base64.b64encode(image_bytes).decode("ascii")
     resp = client.chat.completions.create(
         model=model_id,
@@ -350,81 +443,32 @@ def _call_openai(image_bytes: bytes, prompt: str, model_id: str) -> str:
             }
         ],
         response_format={"type": "json_object"},
-        max_tokens=4096,
-        temperature=0.0,
+        max_tokens=16384,
     )
     return resp.choices[0].message.content or ""
-
-
-def _call_anthropic(image_bytes: bytes, prompt: str, model_id: str) -> str:
-    from anthropic import Anthropic  # type: ignore
-    client = Anthropic()
-    b64 = base64.b64encode(image_bytes).decode("ascii")
-    resp = client.messages.create(
-        model=model_id,
-        max_tokens=4096,
-        temperature=0.0,
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "image",
-                        "source": {
-                            "type": "base64",
-                            "media_type": "image/png",
-                            "data": b64,
-                        },
-                    },
-                    {"type": "text", "text": prompt},
-                ],
-            }
-        ],
-    )
-    parts = [b.text for b in resp.content if getattr(b, "type", None) == "text"]
-    return "\n".join(parts)
-
-
-def _call_gemini(image_bytes: bytes, prompt: str, model_id: str) -> str:
-    from google import genai  # type: ignore
-    from google.genai import types  # type: ignore
-    client = genai.Client()
-    resp = client.models.generate_content(
-        model=model_id,
-        contents=[
-            types.Part.from_bytes(data=image_bytes, mime_type="image/png"),
-            prompt,
-        ],
-        config={
-            "response_mime_type": "application/json",
-            "temperature": 0.0,
-            "max_output_tokens": 4096,
-        },
-    )
-    return getattr(resp, "text", "") or ""
 
 
 MODELS: dict[str, ModelSpec] = {
     "openai": ModelSpec(
         key="openai",
-        label="OpenAI gpt-4o",
-        model_id="gpt-4o",
+        label="OpenAI gpt-4.1",
+        model_id="gpt-4.1",
         env_var="OPENAI_API_KEY",
-        call=_call_openai,
+        call=_call_inference_proxy,
     ),
     "anthropic": ModelSpec(
         key="anthropic",
-        label="Anthropic Claude Sonnet 4.6",
-        model_id="claude-sonnet-4-6",
+        label="Anthropic Claude Opus 4.8",
+        model_id="claude-opus-4-8",
         env_var="ANTHROPIC_API_KEY",
-        call=_call_anthropic,
+        call=_call_inference_proxy,
     ),
     "gemini": ModelSpec(
         key="gemini",
-        label="Google Gemini 2.5 Flash",
-        model_id="gemini-2.5-flash",
+        label="Google Gemini 2.5 Pro",
+        model_id="gemini-2.5-pro",
         env_var="GOOGLE_API_KEY",
-        call=_call_gemini,
+        call=_call_inference_proxy,
     ),
 }
 
@@ -611,7 +655,7 @@ def _run_model_raw(
 
     t0 = time.time()
     try:
-        raw = spec.call(image_bytes, prompt, spec.model_id)
+        raw = spec.call(image_bytes, prompt, spec.model_id, spec.env_var)
     except Exception as exc:  # noqa: BLE001
         return ("", False, time.time() - t0, f"{type(exc).__name__}: {exc}")
     elapsed = time.time() - t0
@@ -636,7 +680,7 @@ def run_door_schedule_model(
     """Call one model with the A10.2 door-schedule prompt."""
     if model_key not in MODELS:
         return ModelRun(
-            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_openai)),
+            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_inference_proxy)),
             df=pd.DataFrame(columns=DOOR_COLUMNS),
             error=f"Unknown model {model_key!r}",
         )
@@ -674,7 +718,7 @@ def run_plan_detection_model(
     """
     if model_key not in MODELS:
         return ModelRun(
-            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_openai)),
+            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_inference_proxy)),
             df=pd.DataFrame(columns=PLAN_COLUMNS),
             error=f"Unknown model {model_key!r}",
         )
@@ -731,7 +775,7 @@ def run_plan_tile_model(
     """
     if model_key not in MODELS:
         return ModelRun(
-            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_openai)),
+            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_inference_proxy)),
             df=pd.DataFrame(columns=PLAN_TILE_COLUMNS),
             error=f"Unknown model {model_key!r}",
         )
@@ -765,6 +809,54 @@ def run_all_plan_tile_detection(
         k: run_plan_tile_model(
             k, image_bytes, vocab=vocab, use_cache=use_cache, sheet_no=sheet_no,
         )
+        for k in MODELS
+    }
+
+
+def run_plan_swing_model(
+    model_key: str,
+    image_bytes: bytes,
+    use_cache: bool = True,
+) -> ModelRun:
+    """Call one model with the swing-door-only detection prompt.
+
+    Output DataFrame uses ``PLAN_TILE_COLUMNS`` (``mark`` is always the
+    literal ``"door"``; bbox is normalized [0, 1] of the input image;
+    plus confidence + model). Cache namespace is ``door_plan_swing`` so
+    it does NOT collide with the hexagon / signage cache.
+    """
+    if model_key not in MODELS:
+        return ModelRun(
+            spec=MODELS.get(model_key, ModelSpec(model_key, model_key, "", "", _call_inference_proxy)),
+            df=pd.DataFrame(columns=PLAN_TILE_COLUMNS),
+            error=f"Unknown model {model_key!r}",
+        )
+    spec = MODELS[model_key]
+    prompt = build_door_swing_prompt()
+    raw, cached, elapsed, err = _run_model_raw(
+        spec, image_bytes,
+        prompt, DOOR_PLAN_SWING_PROMPT_VERSION,
+        kind="door_plan_swing", use_cache=use_cache,
+    )
+    if err:
+        return ModelRun(
+            spec=spec, df=pd.DataFrame(columns=PLAN_TILE_COLUMNS),
+            error=err, cached=cached, elapsed_s=elapsed,
+        )
+    rows = _door_plan_tile_rows(raw, spec.label)
+    return ModelRun(
+        spec=spec, df=pd.DataFrame(rows, columns=PLAN_TILE_COLUMNS),
+        cached=cached, elapsed_s=elapsed, raw_response=raw,
+    )
+
+
+def run_all_plan_swing_detection(
+    image_bytes: bytes,
+    use_cache: bool = True,
+) -> dict[str, ModelRun]:
+    """Run every registered model with the swing-door-only prompt."""
+    return {
+        k: run_plan_swing_model(k, image_bytes, use_cache=use_cache)
         for k in MODELS
     }
 

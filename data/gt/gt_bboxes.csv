@@ -1,0 +1,262 @@
+folder,sheet,floor,split,image_path,image_w,image_h,class,x1,y1,x2,y2,bbox_w,bbox_h
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,226,205,250,234,24,29
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,309,207,335,237,26,30
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,367,205,395,233,28,28
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,454,205,481,237,27,32
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,301,356,329,382,28,26
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,358,366,386,394,28,28
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,305,393,330,421,25,28
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,359,399,379,422,20,23
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,320,426,349,455,29,29
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,348,451,373,478,25,27
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,294,522,326,549,32,27
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,297,555,327,576,30,21
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,337,557,363,583,26,26
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,288,640,318,666,30,26
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,285,665,317,693,32,28
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,343,615,368,639,25,24
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,342,638,368,661,26,23
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,468,636,497,667,29,31
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,460,883,482,909,22,26
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,381,883,405,911,24,28
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,407,884,433,914,26,30
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,314,883,344,911,30,28
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,244,904,270,930,26,26
+A2.1-1,A2.1,Ground,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-1/A2.1-1.png,688,1138,door,218,887,246,911,28,24
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,231,277,257,309,26,32
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,389,284,412,309,23,25
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,235,325,254,349,19,24
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,229,351,242,374,13,23
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,274,363,307,389,33,26
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,340,365,371,387,31,22
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,386,319,413,349,27,30
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,400,349,417,374,17,25
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,324,401,357,434,33,33
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,273,421,305,448,32,27
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,197,447,219,471,22,24
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,326,498,359,528,33,30
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,384,361,403,379,19,18
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,242,360,261,375,19,15
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,232,498,257,517,25,19
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,425,480,442,506,17,26
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,375,528,406,559,31,31
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,309,592,334,624,25,32
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,375,637,403,666,28,29
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,232,636,258,657,26,21
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,328,670,355,696,27,26
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,273,695,306,722,33,27
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,426,690,443,716,17,26
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,258,748,296,780,38,32
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,356,779,384,804,28,25
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,327,767,343,783,16,16
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,344,765,360,781,16,16
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,296,800,320,829,24,29
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,332,801,358,831,26,30
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,226,892,250,919,24,27
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,393,892,411,921,18,29
+A2.1-2,A2.1,Floor 2,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.1-2/A2.1-2.png,608,1138,door,198,681,220,705,22,24
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,520,285,539,313,19,28
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,517,337,536,364,19,27
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,531,366,550,397,19,31
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,511,384,531,399,20,15
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,333,284,358,312,25,28
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,337,337,358,366,21,29
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,323,366,345,397,22,31
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,345,384,366,395,21,11
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,383,381,416,412,33,31
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,463,383,492,411,29,28
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,383,452,414,481,31,29
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,444,429,475,458,31,29
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,333,540,363,559,30,19
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,364,539,392,557,28,18
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,444,541,476,572,32,31
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,501,576,531,598,30,22
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,422,628,455,664,33,36
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,335,702,362,724,27,22
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,362,703,396,727,34,24
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,503,718,535,738,32,20
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,443,742,479,776,36,34
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,385,774,416,805,31,31
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,364,832,407,868,43,36
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,445,853,467,874,22,21
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,467,853,486,876,19,23
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,480,872,513,897,33,25
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,405,898,435,931,30,33
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,449,896,479,932,30,36
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,360,1003,395,1033,35,30
+A2.2-1,A2.2,Floor 3,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-1/A2.2-1.png,754,1286,door,480,1003,516,1033,36,30
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,299,292,326,322,27,30
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,482,294,509,324,27,30
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,484,348,510,375,26,27
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,501,376,522,406,21,30
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,476,389,504,406,28,17
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,428,389,462,422,34,33
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,346,389,387,419,41,30
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,306,345,326,373,20,28
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,295,376,314,402,19,26
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,311,393,336,404,25,11
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,410,438,442,467,32,29
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,349,460,386,492,37,32
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,330,545,360,571,30,26
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,297,548,328,570,31,22
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,412,552,443,581,31,29
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,469,583,501,608,32,25
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,390,637,420,670,30,33
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,301,713,329,734,28,21
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,329,712,360,734,31,22
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,469,729,499,748,30,19
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,407,750,444,780,37,30
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,349,782,387,813,38,31
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,330,839,374,878,44,39
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,447,880,481,908,34,28
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,372,903,401,942,29,39
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,415,902,445,942,30,40
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,326,1011,362,1043,36,32
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,449,1013,483,1042,34,29
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,414,867,433,886,19,19
+A2.2-2,A2.2,Floor 4,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.2-2/A2.2-2.png,728,1308,door,433,864,451,883,18,19
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,275,275,303,303,28,28
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,458,274,482,301,24,27
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,273,324,301,355,28,31
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,456,330,481,355,25,25
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,476,356,493,387,17,31
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,454,375,478,388,24,13
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,270,357,289,384,19,27
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,326,373,364,403,38,30
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,286,373,312,388,26,15
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,401,373,436,399,35,26
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,383,418,417,449,34,31
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,325,437,358,470,33,33
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,388,534,419,563,31,29
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,304,527,334,550,30,23
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,276,526,303,552,27,26
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,441,565,479,588,38,23
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,364,620,393,651,29,31
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,304,694,337,713,33,19
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,268,694,304,714,36,20
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,446,709,476,731,30,22
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,385,733,421,763,36,30
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,326,759,359,794,33,35
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,306,827,349,860,43,33
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,426,862,456,891,30,29
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,392,886,424,923,32,37
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,349,886,381,922,32,36
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,301,991,337,1024,36,33
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,426,995,459,1024,33,29
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,389,845,409,864,20,19
+A2.3-1,A2.3,Floor 5,val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-1/A2.3-1.png,718,1288,door,410,845,430,862,20,17
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,294,268,316,296,22,28
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,476,268,498,295,22,27
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,473,319,499,348,26,29
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,493,354,514,376,21,22
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,467,368,493,382,26,14
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,298,318,320,350,22,32
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,284,350,303,378,19,28
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,301,366,327,379,26,13
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,339,367,378,398,39,31
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,421,365,456,395,35,30
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,399,413,437,444,38,31
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,340,434,376,468,36,34
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,404,527,438,559,34,32
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,321,525,353,547,32,22
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,292,523,321,549,29,26
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,460,557,495,579,35,22
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,382,611,413,645,31,34
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,293,686,323,713,30,27
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,321,687,357,712,36,25
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,462,702,493,723,31,21
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,401,724,439,756,38,32
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,345,756,381,788,36,32
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,326,817,370,854,44,37
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,403,838,427,861,24,23
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,427,835,448,860,21,25
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,444,858,480,887,36,29
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,406,880,441,917,35,37
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,365,880,396,916,31,36
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,322,987,353,1019,31,32
+A2.3-2,A2.3,Floor 6,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.3-2/A2.3-2.png,722,1280,door,443,986,478,1017,35,31
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,265,286,289,315,24,29
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,447,282,472,314,25,32
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,266,337,289,365,23,28
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,255,366,277,397,22,31
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,275,385,298,397,23,12
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,315,384,350,413,35,29
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,391,382,427,413,36,31
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,449,338,471,367,22,29
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,463,366,483,395,20,29
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,442,384,466,399,24,15
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,376,433,408,460,32,27
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,316,453,348,482,32,29
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,264,543,294,564,30,21
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,297,539,323,564,26,25
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,377,545,409,572,32,27
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,435,578,466,600,31,22
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,355,630,386,663,31,33
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,435,720,465,742,30,22
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,295,704,324,725,29,21
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,266,704,294,726,28,22
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,280,691,280,691,0,0
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,316,774,352,806,36,32
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,374,743,409,774,35,31
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,297,835,338,870,41,35
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,378,858,398,874,20,16
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,398,857,419,877,21,20
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,419,875,450,902,31,27
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,380,896,412,932,32,36
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,337,899,370,932,33,33
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,291,1003,325,1036,34,33
+A2.4,A2.4,Floor 7,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A2.4/A2.4.png,692,1290,door,416,1001,447,1034,31,33
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,191,99,244,143,53,44
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,300,96,359,147,59,51
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,393,96,444,152,51,56
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,510,97,552,146,42,49
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,301,302,345,347,44,45
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,375,311,424,358,49,47
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,301,357,345,397,44,40
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,375,362,427,397,52,35
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,330,402,367,439,37,37
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,365,439,397,478,32,39
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,298,526,346,574,48,48
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,296,577,345,617,49,40
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,351,575,408,623,57,48
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,525,683,580,741,55,58
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,276,692,323,730,47,38
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,277,734,329,769,52,35
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,189,1029,229,1079,40,50
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,231,1055,270,1100,39,45
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,412,1023,449,1071,37,48
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,449,1022,482,1077,33,55
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,516,1028,564,1077,48,49
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,361,661,397,695,36,34
+A7.1.1 Ground,A7.1.1,Ground (signage),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Ground/A7.1.1 Ground picture.png,672,1304,door,361,695,399,729,38,34
+A7.1.1 RoofDeck,A7.1.1,RoofDeck,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 RoofDeck/A7.1.1 RoofDeck picture.png,502,1172,door,230,314,270,342,40,28
+A7.1.1 RoofDeck,A7.1.1,RoofDeck,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 RoofDeck/A7.1.1 RoofDeck picture.png,502,1172,door,256,347,293,380,37,33
+A7.1.1 RoofDeck,A7.1.1,RoofDeck,test,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 RoofDeck/A7.1.1 RoofDeck picture.png,502,1172,door,317,788,356,823,39,35
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,844,1395,964,1496,120,101
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1453,1404,1552,1490,99,86
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1459,1569,1568,1662,109,93
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1516,1662,1588,1761,72,99
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1435,1717,1519,1779,84,62
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1282,1712,1408,1823,126,111
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1021,1712,1139,1815,118,103
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,859,1572,962,1655,103,83
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,838,1667,893,1772,55,105
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,892,1718,971,1774,79,56
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1015,1939,1127,2047,112,108
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,854,2233,955,2317,101,84
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,955,2228,1055,2322,100,94
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1222,2247,1335,2334,113,87
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1418,2362,1513,2429,95,67
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1217,1863,1325,1970,108,107
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1141,2518,1261,2639,120,121
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,855,2763,953,2852,98,89
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,955,2764,1058,2856,103,92
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1012,2991,1150,3107,138,116
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1215,2899,1337,3014,122,115
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1421,2816,1513,2892,92,76
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,962,3205,1110,3332,148,127
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1083,3413,1208,3530,125,117
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1236,3406,1349,3532,113,126
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1351,3327,1463,3425,112,98
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,947,3753,1060,3862,113,109
+A7.1.1 Typical,A7.1.1,Typical (x6),val,/Users/kinelaine/Desktop/a7_1_1_gt/label data/A7.1.1 Typical/A7.1.1_Typical.png,1728,4032,door,1346,3759,1475,3867,129,108
