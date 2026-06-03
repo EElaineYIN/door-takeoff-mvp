@@ -78,7 +78,7 @@ def main(split: str = "val", iou_thresh: float = IOU_THRESHOLD,
          overlap: float = OVERLAP, nms_iou: float = NMS_IOU,
          upscale: float = 2.0, postprocess: bool = False,
          models: list[str] | None = None) -> None:
-    load_dotenv(ROOT / ".env", override=False)
+    load_dotenv(ROOT / ".env", override=True)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     gt = pd.read_csv(GT_CSV)

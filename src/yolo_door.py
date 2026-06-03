@@ -53,7 +53,7 @@ DEFAULT_PROJECT = "doors-detection-in-floor-plans-h8ma9"
 # ----------------------------------------------------------------------------
 
 def download(workspace: str, project: str, version: int, fmt: str = "yolov8") -> Path:
-    load_dotenv(override=False)
+    load_dotenv(override=True)
     api_key = os.environ.get("ROBOFLOW_API_KEY")
     if not api_key:
         raise SystemExit(

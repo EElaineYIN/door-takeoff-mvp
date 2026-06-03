@@ -158,7 +158,7 @@ def _prf1(tp, fp, fn):
 def main(split: str = "val", iou_thresh: float = IOU_THRESHOLD,
          conf_thresh: float = CONF_THRESHOLD, tile_target: int = TILE_TARGET,
          overlap: float = OVERLAP, nms_iou: float = NMS_IOU) -> None:
-    load_dotenv(ROOT / ".env", override=False)
+    load_dotenv(ROOT / ".env", override=True)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     gt = pd.read_csv(GT_CSV)

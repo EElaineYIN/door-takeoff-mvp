@@ -62,7 +62,7 @@ def _args() -> argparse.Namespace:
 
 
 def main() -> None:
-    load_dotenv(override=False)
+    load_dotenv(override=True)
     _register_qwen()
 
     if not os.environ.get(QWEN_ENV_VAR):

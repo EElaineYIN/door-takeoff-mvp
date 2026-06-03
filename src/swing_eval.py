@@ -141,7 +141,7 @@ def _prf1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 
 def main(split: str = "val", iou_thresh: float = IOU_THRESHOLD,
          conf_thresh: float = CONF_THRESHOLD) -> None:
-    load_dotenv(ROOT / ".env", override=False)
+    load_dotenv(ROOT / ".env", override=True)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     gt = pd.read_csv(GT_CSV)
