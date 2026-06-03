@@ -198,3 +198,41 @@ follow-up: upscale 3-4× for A2.x specifically.
 * Counting error — **37 %**
 
 Ready for TEST evaluation.
+
+---
+
+## Round 3 — Method 4a: add Qwen3.5-plus as a 4th VLM (2026-06-01)
+
+After advisor feedback we tried adding a **Qwen** model to the V3 pipeline. The only
+Qwen variant accessible on the Stanford inference proxy is `qwen3.5-plus`
+(the dedicated `qwen-vl-*` vision variants return 403 "Model not allowed"). Integration
+was done via a non-invasive wrapper at `src/swing_tile_eval_qwen.py` that registers
+a 4th `ModelSpec` into `MODELS_V3` at runtime; no existing source modified.
+
+Smoke test passed (Qwen returned valid bbox JSON for the few-shot example image),
+and a full VAL run completed against the V3 tile + few-shot pipeline.
+
+### Qwen3.5-plus VAL results (V3 config, no enlargement)
+
+| model     | TP | FP  | FN  | P     | R     | F1@0.5 |
+|-----------|----|-----|-----|-------|-------|--------|
+| anthropic | 11 | 118 | 156 | 0.085 | 0.066 | **0.074** |
+| gemini    |  3 | 224 | 164 | 0.013 | 0.018 | 0.015  |
+| openai    |  0 | 174 | 167 | 0.000 | 0.000 | 0.000  |
+| **qwen**  |  6 | 177 | 161 | 0.033 | 0.036 | **0.034** |
+
+Per-sheet, qwen finds 0 doors on every A2.x sheet (56 + 30 = 86 GT, 0 TP), 2 TP on A2.3,
+and 4 TP on A7.1.1 (combined). The (P, R) is roughly halfway between gemini and anthropic,
+with the same systematic blindness on A2.x that anthropic also suffers from.
+
+### Takeaway
+
+`qwen3.5-plus` is the only Qwen variant we can hit through the proxy, and it
+performs **worse than anthropic** and only marginally better than gemini.
+With no vision-tuned Qwen accessible (the `-vl-*` variants are blocked),
+adding Qwen does *not* improve the ensemble — anthropic still wins.
+
+Files:
+* `outputs/eval/swingtilev3_qwen_val_predictions.csv`
+* `outputs/eval/swingtilev3_qwen_val_metrics_overall.csv`
+* `outputs/eval/swingtilev3_qwen_val_metrics_by_sheet.csv`
