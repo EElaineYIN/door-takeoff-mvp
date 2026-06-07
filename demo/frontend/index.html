@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Door Takeoff — AI for 2D Drawing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <div>
+        <h1>Door Takeoff</h1>
+        <p>AI for 2D Drawing Takeoff &middot; YOLO locates &middot; Claude understands &middot; You review</p>
+      </div>
+    </div>
+    <nav class="pipeline" id="pipeline">
+      <span class="step" data-step="upload">1 · Upload</span><span class="arrow">›</span>
+      <span class="step" data-step="schedule">2 · Read schedule</span><span class="arrow">›</span>
+      <span class="step" data-step="takeoff">3 · Takeoff</span><span class="arrow">›</span>
+      <span class="step" data-step="review">4 · Review</span><span class="arrow">›</span>
+      <span class="step" data-step="report">5 · Report</span>
+    </nav>
+    <button class="btn ghost" id="dashBtn" hidden>📊 Dashboard</button>
+  </header>
+
+  <main>
+    <!-- LEFT -->
+    <aside class="sidebar">
+      <label class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept=".pdf,image/*" hidden />
+        <span class="dz-icon">⬆</span>
+        <span class="dz-title">Upload construction set</span>
+        <span class="dz-sub">PDF (full set) or single image</span>
+      </label>
+
+      <div class="panel" id="schedulePanel" hidden>
+        <h2>Door schedule <span class="pill" id="schedPill"></span></h2>
+        <p class="muted-sm" id="schedNote"></p>
+        <div class="sched-table" id="schedTable"></div>
+      </div>
+
+      <div class="panel" id="pagesPanel" hidden>
+        <h2>Sheets — pick one to take off</h2>
+        <ul class="pagelist" id="pagelist"></ul>
+      </div>
+
+      <div class="panel" id="exportPanel" hidden>
+        <button class="btn ghost block" id="exportBtn">⬇ Export takeoff CSV</button>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <section class="stage">
+      <div class="toolbar" id="toolbar" hidden>
+        <button class="btn primary" id="detectBtn">① Detect doors</button>
+        <button class="btn" id="classifyBtn" disabled>② Classify types (Claude)</button>
+        <span class="sep"></span>
+        <button class="btn tool" id="regionBtn" title="Draw a box around ONE drawing, then detect inside it">▢ Select area</button>
+        <button class="btn tool" id="clearRegionBtn" title="Clear the selected area (scan whole sheet)" hidden>✕ area</button>
+        <button class="btn tool" id="addBtn" title="Add a door box">＋ Add</button>
+        <span class="hint" id="modeHint"></span>
+        <span class="spacer"></span>
+        <label class="conf">conf <input type="range" id="confSlider" min="0.05" max="0.9" step="0.05" value="0.25" /><b id="confVal">0.25</b></label>
+        <div class="zoom">
+          <button class="btn icon" id="zoomOut">−</button><span id="zoomVal">100%</span>
+          <button class="btn icon" id="zoomIn">＋</button>
+          <button class="btn icon" id="zoomFit" title="Fit whole sheet">⤢</button>
+        </div>
+      </div>
+
+      <div class="viewport" id="viewport">
+        <div class="empty" id="emptyState">
+          <div class="empty-art"></div>
+          <p>Upload a construction set to begin.</p>
+          <p class="muted-sm">The AI will read the door schedule, then you pick a sheet to take off.</p>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap" hidden>
+          <img id="planImg" alt="floor plan" />
+          <div class="overlay" id="overlay"></div>
+          <div class="scanline" id="scanline" hidden></div>
+        </div>
+      </div>
+      <div class="statusbar" id="statusbar"></div>
+    </section>
+
+    <!-- RIGHT -->
+    <aside class="inspector">
+      <div class="count-card">
+        <span class="count-label">Doors on this sheet</span>
+        <span class="count-num" id="countNum">—</span>
+      </div>
+
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-tab="types">Types</button>
+        <button class="tab" data-tab="reconcile">Reconcile</button>
+        <button class="tab" data-tab="audit">Audit</button>
+      </div>
+
+      <div class="tabpane" id="pane-types">
+        <ul class="breakdown" id="breakdown">
+          <li><span class="dot swing"></span>Swing<b id="b-swing">0</b></li>
+          <li><span class="dot double"></span>Double<b id="b-double">0</b></li>
+          <li><span class="dot sliding"></span>Sliding<b id="b-sliding">0</b></li>
+          <li><span class="dot pocket"></span>Pocket<b id="b-pocket">0</b></li>
+          <li><span class="dot other"></span>Other<b id="b-other">0</b></li>
+        </ul>
+        <div class="panel" id="selPanel" hidden>
+          <h2>Selected door</h2>
+          <div class="field"><label>Type</label>
+            <select id="selType"><option>swing</option><option>double</option><option>sliding</option><option>pocket</option><option>other</option></select></div>
+          <div class="field"><label>Direction</label>
+            <select id="selDir"><option>n/a</option><option>left</option><option>right</option><option>up</option><option>down</option></select></div>
+          <p class="sel-note" id="selNote"></p>
+          <button class="btn danger block" id="deleteBtn">Delete door</button>
+        </div>
+      </div>
+
+      <div class="tabpane" id="pane-reconcile" hidden>
+        <button class="btn block" id="reconcileBtn" disabled>Reconcile vs schedule</button>
+        <div class="recon" id="reconResult"></div>
+      </div>
+
+      <div class="tabpane" id="pane-audit" hidden>
+        <div class="audit" id="auditBox"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Dashboard overlay -->
+  <div class="modal" id="dashModal" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2>Takeoff Dashboard</h2>
+        <button class="btn icon" id="dashClose">✕</button>
+      </div>
+      <div class="dash-grid" id="dashGrid"></div>
+    </div>
+  </div>
+
+  <div class="tooltip" id="tooltip" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -17,3 +17,4 @@ data/*.xlsx
 # OCR cache and exported results
 outputs/.cache/
 outputs/extracted_takeoff.csv
+demo/.cache/
