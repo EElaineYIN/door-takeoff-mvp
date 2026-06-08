@@ -39,17 +39,18 @@
         <h2>Door schedule <span class="pill" id="schedPill"></span></h2>
         <p class="muted-sm" id="schedNote"></p>
         <div class="sched-table" id="schedTable"></div>
+        <button class="btn block sm" id="repickSchedBtn">↻ Wrong sheet? Pick the door-schedule page</button>
       </div>
 
       <div class="panel" id="pagesPanel" hidden>
-        <h2>Sheets — pick one to take off</h2>
+        <h2 id="pagesHead">Sheets — pick one to take off</h2>
         <ul class="pagelist" id="pagelist"></ul>
       </div>
 
       <div class="panel" id="exportPanel" hidden>
         <h2>Report &amp; export</h2>
         <button class="btn primary block" id="exportBtn">⬇ Export takeoff CSV</button>
-        <button class="btn ghost block" id="exportLabelsBtn" title="Bundle your reviewed boxes as YOLO images+labels to retrain the model">🧠 Export review → YOLO labels</button>
+        <button class="btn block" id="exportLabelsBtn" title="Bundle your reviewed boxes as YOLO images+labels to retrain the model">🧠 Export review → YOLO labels</button>
       </div>
     </aside>
 

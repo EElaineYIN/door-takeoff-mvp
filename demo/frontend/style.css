@@ -63,6 +63,9 @@ main{flex:1;display:grid;grid-template-columns:262px 1fr 290px;min-height:0}
 .btn.danger:hover{background:var(--pocket);color:#fff}
 .btn.tool.on{background:var(--sea);color:var(--teal-deep);border-color:var(--sea)}
 .btn.icon{padding:5px 10px}.btn.block{width:100%}
+.btn.sm{font-size:11px;padding:6px 9px}
+.btn.block+.btn.block{margin-top:8px}
+.btn.on{background:var(--teal);color:#fff;border-color:var(--teal)}
 
 .toolbar{display:flex;align-items:center;gap:9px;padding:11px 16px;background:#fff;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .toolbar .sep{width:1px;height:20px;background:var(--line)}.toolbar .spacer{flex:1}

@@ -5,6 +5,7 @@ const S = {
   scale:1, zoom:1, sel:null, adding:false, imgW:0, imgH:0,
   panX:0, panY:0,                       // canvas-wrap offset inside the viewport (px)
   region:null, selectingRegion:false,   // detect only inside this [x1,y1,x2,y2] (image px)
+  pickingSchedule:false,                 // clicking a sheet sets it as the door-schedule page
   audit:{ai:0, added:0, removed:0, edited:0},   // cumulative across session
 };
 const TYPES=["swing","double","sliding","pocket","other"];
@@ -51,25 +52,42 @@ async function uploadFile(file){
 }
 
 // ---------- schedule ----------
-async function scanSchedule(){
-  setStatus("AI is reading the door schedule…",true); setStep("schedule");
+async function scanSchedule(pageOverride){
+  const manual=Number.isInteger(pageOverride);
+  setStatus(manual?"Reading the door schedule from the sheet you picked…":"AI is reading the door schedule…",true); setStep("schedule");
   try{
+    const body={job_id:S.job}; if(manual)body.page=pageOverride;
     const data=await(await api("/api/scan_schedule",{method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({job_id:S.job})})).json();
+      body:JSON.stringify(body)})).json();
     if(data.found){
       S.schedPage=data.schedule_page; S.schedule=data.doors||[];
       renderSchedule(data);
       renderPageList();
-      setStatus(`AI read the schedule on ${data.schedule_page_name}: ${S.schedule.length} door type(s). Now pick a plan sheet to take off.`);
+      const sheet=sheetName(data.schedule_page);
+      setStatus(`Read the door schedule on ${sheet}: ${S.schedule.length} door row(s). Now pick a plan sheet to take off.`);
     }else{
-      setStatus("No door schedule found in this PDF — pick any sheet to take off.");
+      // still reveal the panel so the user can manually point at the schedule sheet
+      $("schedulePanel").hidden=false;
+      $("schedPill").textContent=""; $("schedNote").textContent="No door schedule auto-detected.";
+      $("schedTable").innerHTML='<p class="muted-sm">Click the button below, then choose the sheet that holds the door schedule.</p>';
+      setStatus("No door schedule found automatically — you can pick the schedule sheet manually.");
     }
     setStep("takeoff");
   }catch(err){setStatus("Schedule scan failed: "+err.message);setStep("takeoff");}
 }
+function sheetName(idx){const p=S.pages.find(x=>x.index===idx);return p?(p.sheet||p.name):("Sheet "+(idx+1));}
+
+// pick-the-schedule-sheet mode
+$("repickSchedBtn").onclick=()=>{
+  S.pickingSchedule=!S.pickingSchedule;
+  $("repickSchedBtn").classList.toggle("on",S.pickingSchedule);
+  $("pagesHead").textContent=S.pickingSchedule?"Click the sheet that holds the DOOR SCHEDULE":"Sheets — pick one to take off";
+  setStatus(S.pickingSchedule?"Schedule-pick mode: click the door-schedule sheet in the list.":"");
+};
+
 function renderSchedule(data){
   $("schedulePanel").hidden=false;
-  $("schedPill").textContent=data.schedule_page_name||"";
+  $("schedPill").textContent=sheetName(data.schedule_page);   // sheet number only, no mis-read title
   $("schedNote").textContent=data.note||"";
   const t=$("schedTable"); t.innerHTML="";
   if(!S.schedule.length){t.innerHTML='<p class="muted-sm">No rows parsed.</p>';return;}
@@ -91,7 +109,14 @@ function renderPageList(){
     const isSched=p.index===S.schedPage;
     li.className=isSched?"sched":"";
     li.innerHTML=`<span>${p.name}${isSched?" · schedule":""}</span><span class="badge" id="pb-${p.index}"></span>`;
-    li.dataset.idx=p.index; li.onclick=()=>selectPage(p.index);
+    li.dataset.idx=p.index;
+    li.onclick=()=>{
+      if(S.pickingSchedule){
+        S.pickingSchedule=false;$("repickSchedBtn").classList.remove("on");
+        $("pagesHead").textContent="Sheets — pick one to take off";
+        scanSchedule(p.index);
+      }else selectPage(p.index);
+    };
     ul.appendChild(li);
   });
   refreshBadges();
