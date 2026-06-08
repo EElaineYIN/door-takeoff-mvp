@@ -11,6 +11,7 @@ scale, detect on each, map boxes back to full-image coords, then NMS-merge.
 """
 from __future__ import annotations
 
+import os
 import threading
 from pathlib import Path
 
@@ -18,7 +19,26 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-WEIGHTS = ROOT / "outputs" / "yolo_weights" / "yolo_door" / "weights" / "best.pt"
+
+
+def _resolve_weights() -> Path:
+    """Find the fine-tuned weights. Honors MODEL_PATH env, then falls back to the
+    handoff location (model_weights/best.pt) and the training output location."""
+    env = os.environ.get("MODEL_PATH")
+    candidates = []
+    if env:
+        candidates.append(Path(env) if os.path.isabs(env) else ROOT / env)
+    candidates += [
+        ROOT / "model_weights" / "best.pt",
+        ROOT / "outputs" / "yolo_weights" / "yolo_door" / "weights" / "best.pt",
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return candidates[0]  # let the loader raise a clear error
+
+
+WEIGHTS = _resolve_weights()
 
 # Class 0 == door in data.yaml (names: ['0', 'stairs']). We only surface doors.
 DOOR_CLASS = 0
