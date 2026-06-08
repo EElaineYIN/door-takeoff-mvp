@@ -24,7 +24,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Calibri,sans-serif;
 
 main{flex:1;display:grid;grid-template-columns:262px 1fr 290px;min-height:0}
 .sidebar,.inspector{background:var(--card);padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:14px}
-.sidebar{border-right:1px solid var(--line)}
+.sidebar{border-right:1px solid var(--line);overflow:hidden}
+.sidebar .dropzone,.sidebar #schedulePanel,.sidebar #exportPanel{flex:0 0 auto}
+#pagesPanel{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
 .inspector{border-left:1px solid var(--line)}
 .stage{display:flex;flex-direction:column;min-width:0;background:var(--bg)}
 
@@ -42,7 +44,7 @@ main{flex:1;display:grid;grid-template-columns:262px 1fr 290px;min-height:0}
 .sched-row .ty{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}
 .sched-row .sz{color:var(--muted);font-variant-numeric:tabular-nums}
 
-.pagelist{list-style:none;display:flex;flex-direction:column;gap:5px}
+.pagelist{list-style:none;display:flex;flex-direction:column;gap:5px;flex:1 1 auto;min-height:0;overflow-y:auto}
 .pagelist li{padding:8px 11px;border-radius:8px;font-size:12.5px;cursor:pointer;border:1px solid transparent;display:flex;justify-content:space-between;align-items:center;transition:.15s}
 .pagelist li:hover{background:#eef6f7}
 .pagelist li.active{background:var(--teal);color:#fff}
@@ -68,13 +70,17 @@ main{flex:1;display:grid;grid-template-columns:262px 1fr 290px;min-height:0}
 .conf{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--muted)}.conf input{width:84px;accent-color:var(--teal)}
 .zoom{display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted)}
 
-.viewport{flex:1;overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:24px}
+/* Pan/zoom via absolute positioning of .canvas-wrap (JS-controlled), so dragging
+   works reliably regardless of size — no dependence on native scroll. */
+.viewport{flex:1;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;padding:0}
+.viewport.panning{cursor:grabbing}
+.viewport.pannable{cursor:grab}
 .empty{margin:auto;text-align:center;color:var(--muted);max-width:340px}
 .empty-art{width:110px;height:110px;margin:0 auto 14px;border-radius:18px;background:
   radial-gradient(circle at 72% 72%,transparent 40%,var(--sea) 41%,var(--sea) 47%,transparent 48%),
   radial-gradient(circle at 72% 72%,transparent 62%,var(--sea) 63%,var(--sea) 69%,transparent 70%),#eef6f7}
 .empty p{margin-bottom:6px}
-.canvas-wrap{position:relative;line-height:0;box-shadow:var(--shadow);background:#fff}
+.canvas-wrap{position:absolute;top:0;left:0;line-height:0;box-shadow:var(--shadow);background:#fff}
 .canvas-wrap img{display:block;-webkit-user-drag:none;user-select:none}
 .overlay{position:absolute;inset:0}
 
@@ -89,9 +95,14 @@ main{flex:1;display:grid;grid-template-columns:262px 1fr 290px;min-height:0}
 .box[data-type=other]{border-color:var(--other);background:rgba(138,155,160,.12)}
 .box.human{border-style:dashed}
 .box.sel{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--teal-deep);z-index:5}
-.box .tag{position:absolute;top:-17px;left:-2px;font-size:9.5px;font-weight:700;color:#fff;background:var(--swing);padding:1px 6px;border-radius:4px;white-space:nowrap}
+/* tags clutter dense plans, so only show them on the selected box (others use
+   colour + hover tooltip). Bigger + shadowed for legibility. */
+.box .tag{display:none;position:absolute;top:-19px;left:-2px;font-size:11px;font-weight:700;color:#fff;background:var(--swing);padding:2px 7px;border-radius:5px;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.35);letter-spacing:.2px}
+.box.sel .tag{display:block;z-index:5}
 .box[data-type=double] .tag{background:var(--double)}.box[data-type=sliding] .tag{background:var(--sliding)}
 .box[data-type=pocket] .tag{background:var(--pocket)}.box[data-type=other] .tag{background:var(--other)}
+.box[data-type=unclassified]{border-color:#b7c4c6;border-style:dashed;background:rgba(183,196,198,.10)}
+.box[data-type=unclassified] .tag{background:#8a9ba0}
 .box .handle{position:absolute;right:-5px;bottom:-5px;width:11px;height:11px;background:#fff;border:2px solid var(--teal-deep);border-radius:50%;cursor:nwse-resize}
 .overlay.adding{cursor:crosshair}
 .overlay.regioning{cursor:crosshair}
@@ -109,7 +120,7 @@ main{flex:1;display:grid;grid-template-columns:262px 1fr 290px;min-height:0}
 .breakdown li{display:flex;align-items:center;gap:8px;font-size:12.5px}
 .breakdown li b{margin-left:auto;font-variant-numeric:tabular-nums}
 .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
-.dot.swing{background:var(--swing)}.dot.double{background:var(--double)}.dot.sliding{background:var(--sliding)}.dot.pocket{background:var(--pocket)}.dot.other{background:var(--other)}
+.dot.swing{background:var(--swing)}.dot.double{background:var(--double)}.dot.sliding{background:var(--sliding)}.dot.pocket{background:var(--pocket)}.dot.other{background:var(--other)}.dot.unclassified{background:#b7c4c6}
 
 .field{margin-bottom:9px}.field label{font-size:10.5px;color:var(--muted);display:block;margin-bottom:3px}
 .field select{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:12.5px;background:#fff}

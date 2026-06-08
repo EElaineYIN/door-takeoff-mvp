@@ -11,8 +11,8 @@
     <div class="brand">
       <span class="brand-mark"></span>
       <div>
-        <h1>Door Takeoff</h1>
-        <p>AI for 2D Drawing Takeoff &middot; YOLO locates &middot; Claude understands &middot; You review</p>
+        <h1>Door Takeoff Copilot</h1>
+        <p>From construction PDF to a verified door schedule - AI detects &amp; classifies, you approve</p>
       </div>
     </div>
     <nav class="pipeline" id="pipeline">
@@ -47,7 +47,9 @@
       </div>
 
       <div class="panel" id="exportPanel" hidden>
-        <button class="btn ghost block" id="exportBtn">⬇ Export takeoff CSV</button>
+        <h2>Report &amp; export</h2>
+        <button class="btn primary block" id="exportBtn">⬇ Export takeoff CSV</button>
+        <button class="btn ghost block" id="exportLabelsBtn" title="Bundle your reviewed boxes as YOLO images+labels to retrain the model">🧠 Export review → YOLO labels</button>
       </div>
     </aside>
 
@@ -100,6 +102,7 @@
 
       <div class="tabpane" id="pane-types">
         <ul class="breakdown" id="breakdown">
+          <li id="row-unclassified"><span class="dot unclassified"></span>Unclassified<b id="b-unclassified">0</b></li>
           <li><span class="dot swing"></span>Swing<b id="b-swing">0</b></li>
           <li><span class="dot double"></span>Double<b id="b-double">0</b></li>
           <li><span class="dot sliding"></span>Sliding<b id="b-sliding">0</b></li>

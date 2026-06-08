@@ -3,11 +3,12 @@ const S = {
   job:null, pages:[], cur:-1, isPdf:false, schedPage:null, schedule:[],
   boxes:{},            // page -> [{x1,y1,x2,y2,score,type,direction,note,origin,edited,id}]
   scale:1, zoom:1, sel:null, adding:false, imgW:0, imgH:0,
+  panX:0, panY:0,                       // canvas-wrap offset inside the viewport (px)
   region:null, selectingRegion:false,   // detect only inside this [x1,y1,x2,y2] (image px)
   audit:{ai:0, added:0, removed:0, edited:0},   // cumulative across session
 };
 const TYPES=["swing","double","sliding","pocket","other"];
-const TYPE_COLOR={swing:"#2D8291",double:"#7b5ea7",sliding:"#d98a2b",pocket:"#c0504d",other:"#8a9ba0"};
+const TYPE_COLOR={swing:"#2D8291",double:"#7b5ea7",sliding:"#d98a2b",pocket:"#c0504d",other:"#8a9ba0",unclassified:"#b7c4c6"};
 let nextId=1;
 
 const $=(id)=>document.getElementById(id);
@@ -114,13 +115,21 @@ function fitScale(){
   const vp=$("viewport");
   S.scale=Math.min(1,(vp.clientWidth-48)/S.imgW,(vp.clientHeight-48)/S.imgH);
   S.zoom=1;$("zoomVal").textContent=Math.round(S.scale*100)+"%";
+  centerView();
 }
+function centerView(){
+  const vp=$("viewport"),d=disp();
+  S.panX=(vp.clientWidth-S.imgW*d)/2;
+  S.panY=(vp.clientHeight-S.imgH*d)/2;
+}
+function applyPan(){const w=$("canvasWrap");w.style.left=S.panX+"px";w.style.top=S.panY+"px";}
 
 // ---------- layout / boxes ----------
 function layout(){
   const img=$("planImg"),wrap=$("canvasWrap"),ov=$("overlay"),d=disp();
   const w=S.imgW*d,h=S.imgH*d;
   img.style.width=w+"px";img.style.height=h+"px";wrap.style.width=w+"px";wrap.style.height=h+"px";
+  applyPan();
   ov.innerHTML="";
   if(S.region){
     const r=S.region,el=document.createElement("div");el.className="region";
@@ -129,6 +138,7 @@ function layout(){
     ov.appendChild(el);
   }
   (S.boxes[S.cur]||[]).forEach(b=>ov.appendChild(makeBox(b)));
+  setPanCursor();
 }
 function makeBox(b){
   const d=disp(),el=document.createElement("div");
@@ -175,7 +185,7 @@ function startDrag(e,b,el,resize){
 }
 
 // ---------- add mode ----------
-$("addBtn").onclick=()=>{S.adding=!S.adding;$("addBtn").classList.toggle("on",S.adding);$("overlay").classList.toggle("adding",S.adding);$("modeHint").textContent=S.adding?"Draw a box on the plan":"";};
+$("addBtn").onclick=()=>{S.adding=!S.adding;if(S.adding){S.selectingRegion=false;$("regionBtn").classList.remove("on");$("overlay").classList.remove("regioning");}$("addBtn").classList.toggle("on",S.adding);$("overlay").classList.toggle("adding",S.adding);$("modeHint").textContent=S.adding?"Draw a box on the plan":"";setPanCursor();};
 $("overlay").addEventListener("mousedown",e=>{
   if(!S.adding||e.target!==$("overlay"))return;
   const rect=$("overlay").getBoundingClientRect(),d=disp();
@@ -187,8 +197,9 @@ $("overlay").addEventListener("mousedown",e=>{
     if(Math.abs(b.x2-b.x1)<4||Math.abs(b.y2-b.y1)<4){layout();return;}
     if(b.x2<b.x1)[b.x1,b.x2]=[b.x2,b.x1]; if(b.y2<b.y1)[b.y1,b.y2]=[b.y2,b.y1];
     (S.boxes[S.cur]=S.boxes[S.cur]||[]).push(b); S.audit.added++;
-    S.adding=false;$("addBtn").classList.remove("on");$("overlay").classList.remove("adding");$("modeHint").textContent="";
+    // stay in add mode so several missed doors can be drawn in a row
     layout();selectBox(b);updateCounts();refreshBadges();
+    $("modeHint").textContent="Added — draw another, or press Esc / click ＋ Add to finish";
   }
   document.addEventListener("mousemove",move);document.addEventListener("mouseup",up);
 });
@@ -200,6 +211,7 @@ $("regionBtn").onclick=()=>{
   $("regionBtn").classList.toggle("on",S.selectingRegion);
   $("overlay").classList.toggle("regioning",S.selectingRegion);
   $("modeHint").textContent=S.selectingRegion?"Drag a box around ONE drawing":"";
+  setPanCursor();
 };
 $("clearRegionBtn").onclick=()=>{S.region=null;$("clearRegionBtn").hidden=true;layout();setStatus("Area cleared — Detect will scan the whole sheet.");};
 $("overlay").addEventListener("mousedown",e=>{
@@ -219,6 +231,28 @@ $("overlay").addEventListener("mousedown",e=>{
   document.addEventListener("mousemove",move);document.addEventListener("mouseup",up);
 });
 
+// ---------- pan (drag the sheet around when zoomed in) ----------
+(function(){
+  const vp=$("viewport");
+  vp.addEventListener("mousedown",e=>{
+    if(S.adding||S.selectingRegion)return;        // those modes draw boxes instead
+    if(e.button!==0||e.target.closest(".box"))return;  // let box drag work
+    if(S.cur<0)return;
+    e.preventDefault();
+    const sx=e.clientX,sy=e.clientY,px=S.panX,py=S.panY;
+    vp.classList.add("panning");
+    function move(ev){S.panX=px+(ev.clientX-sx);S.panY=py+(ev.clientY-sy);applyPan();}
+    function up(){vp.classList.remove("panning");document.removeEventListener("mousemove",move);document.removeEventListener("mouseup",up);}
+    document.addEventListener("mousemove",move);document.addEventListener("mouseup",up);
+  });
+  // wheel to zoom toward the cursor
+  vp.addEventListener("wheel",e=>{
+    if(S.cur<0)return; e.preventDefault();
+    zoomAt(e.deltaY<0?1.15:1/1.15,e.clientX,e.clientY);
+  },{passive:false});
+})();
+function setPanCursor(){const vp=$("viewport");vp.classList.toggle("pannable",S.cur>=0&&!S.adding&&!S.selectingRegion);}
+
 // ---------- selection ----------
 $("overlay").addEventListener("mousedown",e=>{if(e.target===$("overlay")&&!S.adding&&!S.selectingRegion)selectBox(null);});
 function selectBox(b){S.sel=b;document.querySelectorAll(".box").forEach((el,i)=>el.classList.toggle("sel",(S.boxes[S.cur]||[])[i]===b));setSelPanel(b);}
@@ -228,7 +262,14 @@ $("selDir").onchange=e=>{if(S.sel){S.sel.direction=e.target.value;layout();resel
 function reselect(){const b=S.sel;document.querySelectorAll(".box").forEach((el,i)=>el.classList.toggle("sel",(S.boxes[S.cur]||[])[i]===b));}
 $("deleteBtn").onclick=deleteSel;
 function deleteSel(){if(!S.sel)return;if(S.sel.origin==="ai")S.audit.removed++;S.boxes[S.cur]=(S.boxes[S.cur]||[]).filter(x=>x!==S.sel);S.sel=null;setSelPanel(null);layout();updateCounts();refreshBadges();}
-document.addEventListener("keydown",e=>{if((e.key==="Delete"||e.key==="Backspace")&&S.sel&&document.activeElement.tagName!=="SELECT"){e.preventDefault();deleteSel();}});
+document.addEventListener("keydown",e=>{
+  if((e.key==="Delete"||e.key==="Backspace")&&S.sel&&document.activeElement.tagName!=="SELECT"){e.preventDefault();deleteSel();return;}
+  if(e.key==="Escape"){
+    if(S.adding){S.adding=false;$("addBtn").classList.remove("on");$("overlay").classList.remove("adding");}
+    if(S.selectingRegion){S.selectingRegion=false;$("regionBtn").classList.remove("on");$("overlay").classList.remove("regioning");}
+    $("modeHint").textContent="";setPanCursor();
+  }
+});
 
 // ---------- scan animation ----------
 function scan(on){$("scanline").hidden=!on;}
@@ -240,12 +281,12 @@ $("detectBtn").onclick=async()=>{
     const region=S.region?[S.region.x1,S.region.y1,S.region.x2,S.region.y2]:null;
     const data=await(await api("/api/detect",{method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({job_id:S.job,page:S.cur,conf:parseFloat($("confSlider").value),region})})).json();
-    S.boxes[S.cur]=data.boxes.map(b=>({...b,type:"swing",direction:"n/a",note:"",origin:"ai",edited:false,id:nextId++}));
+    S.boxes[S.cur]=data.boxes.map(b=>({...b,type:"unclassified",direction:"n/a",note:"",origin:"ai",edited:false,id:nextId++}));
     S.audit.ai+=data.count;
     layout();updateCounts();refreshBadges();
     $("classifyBtn").disabled=data.count===0;
     $("reconcileBtn").disabled=!(data.count&&S.schedule.length);
-    setStatus(`YOLO found ${data.count} door(s). Review them, then classify types.`);setStep("review");
+    setStatus(`YOLO located ${data.count} door(s) — types not read yet. Click ② Classify to identify each type.`);setStep("review");
   }catch(err){setStatus("Detect failed: "+err.message);}finally{scan(false);}
 };
 
@@ -256,7 +297,7 @@ $("classifyBtn").onclick=async()=>{
   try{
     const{results}=await(await api("/api/classify",{method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({job_id:S.job,page:S.cur,boxes:boxes.map(({x1,y1,x2,y2})=>({x1,y1,x2,y2}))})})).json();
-    results.forEach((r,i)=>{if(!boxes[i])return;boxes[i].type=r.type||"swing";boxes[i].direction=r.direction||"n/a";boxes[i].note=r.note||"";boxes[i].is_door=r.is_door;});
+    results.forEach((r,i)=>{if(!boxes[i])return;boxes[i].type=r.type||"other";boxes[i].direction=r.direction||"n/a";boxes[i].note=r.note||"";boxes[i].is_door=r.is_door;});
     layout();updateCounts();
     setStatus("Claude classified the door types. Adjust any in the inspector, then reconcile or export.");
   }catch(err){setStatus("Classify failed: "+err.message);}finally{scan(false);}
@@ -265,8 +306,12 @@ $("classifyBtn").onclick=async()=>{
 // ---------- counts ----------
 function updateCounts(){
   const boxes=S.boxes[S.cur]||[];$("countNum").textContent=boxes.length;
-  const c={swing:0,double:0,sliding:0,pocket:0,other:0};boxes.forEach(b=>c[b.type]=(c[b.type]||0)+1);
+  const c={swing:0,double:0,sliding:0,pocket:0,other:0,unclassified:0};
+  boxes.forEach(b=>c[b.type]=(c[b.type]||0)+1);
   TYPES.forEach(t=>$("b-"+t).textContent=c[t]||0);
+  $("b-unclassified").textContent=c.unclassified||0;
+  // only show the Unclassified row while some doors still await classification
+  $("row-unclassified").style.display=c.unclassified?"flex":"none";
   renderAudit();
 }
 
@@ -338,17 +383,52 @@ function openDash(){
 }
 
 // ---------- zoom / conf ----------
-$("zoomIn").onclick=()=>setZoom(S.zoom+0.2);$("zoomOut").onclick=()=>setZoom(S.zoom-0.2);
+$("zoomIn").onclick=()=>zoomAtCenter(1.4);$("zoomOut").onclick=()=>zoomAtCenter(1/1.4);
 $("zoomFit").onclick=()=>{fitScale();layout();};
-function setZoom(z){S.zoom=Math.max(0.4,Math.min(4,z));$("zoomVal").textContent=Math.round(S.scale*S.zoom*100)+"%";layout();}
+function clampZoom(z){
+  // allow zooming up to ~250% of native pixels regardless of fit-scale.
+  const maxZoom=S.scale>0?2.5/S.scale:8, minZoom=0.5;
+  return Math.max(minZoom,Math.min(maxZoom,z));
+}
+function zoomAt(factor,clientX,clientY){
+  const vp=$("viewport"),r=vp.getBoundingClientRect();
+  const cx=clientX-r.left,cy=clientY-r.top;        // cursor in viewport coords
+  const oldD=disp(),newZoom=clampZoom(S.zoom*factor);
+  if(newZoom===S.zoom)return;
+  S.zoom=newZoom; const newD=disp();
+  // keep the image point under the cursor fixed
+  S.panX=cx-(cx-S.panX)*(newD/oldD);
+  S.panY=cy-(cy-S.panY)*(newD/oldD);
+  $("zoomVal").textContent=Math.round(newD*100)+"%";layout();
+}
+function zoomAtCenter(factor){const vp=$("viewport"),r=vp.getBoundingClientRect();zoomAt(factor,r.left+vp.clientWidth/2,r.top+vp.clientHeight/2);}
 $("confSlider").oninput=e=>$("confVal").textContent=e.target.value;
 
 // ---------- export ----------
 $("exportBtn").onclick=async()=>{
-  const rows=S.pages.map(p=>{const boxes=S.boxes[p.index]||[];const c={swing:0,double:0,sliding:0,pocket:0,other:0};boxes.forEach(b=>c[b.type]=(c[b.type]||0)+1);return{sheet:p.name,door_count:boxes.length,...c};});
+  const rows=S.pages.filter(p=>(S.boxes[p.index]||[]).length)
+    .map(p=>{const boxes=S.boxes[p.index]||[];const c={swing:0,double:0,sliding:0,pocket:0,other:0};boxes.forEach(b=>c[b.type]=(c[b.type]||0)+1);return{sheet:p.name,door_count:boxes.length,...c};});
+  if(!rows.length){setStatus("Nothing to export yet — detect doors on at least one sheet first.");return;}
   const blob=await(await api("/api/export",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({rows})})).blob();
   const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="takeoff.csv";a.click();
   setStatus("Exported takeoff.csv");setStep("report");
+};
+
+// ---------- export human-reviewed boxes as YOLO training labels (active learning) ----------
+$("exportLabelsBtn").onclick=async()=>{
+  const pages=S.pages.filter(p=>(S.boxes[p.index]||[]).length).map(p=>({
+    page:p.index,
+    boxes:(S.boxes[p.index]||[]).map(b=>({x1:b.x1,y1:b.y1,x2:b.x2,y2:b.y2,type:b.type})),
+  }));
+  if(!pages.length){setStatus("No reviewed doors yet — detect/review on a sheet first.");return;}
+  const total=pages.reduce((n,p)=>n+p.boxes.length,0);
+  setStatus(`Bundling ${total} reviewed door box(es) as YOLO labels…`,true);
+  try{
+    const blob=await(await api("/api/export_labels",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({job_id:S.job,pages})})).blob();
+    const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="review_labels.zip";a.click();
+    setStatus(`Exported review_labels.zip (${total} boxes) — add to the training set and re-fine-tune.`);setStep("report");
+  }catch(err){setStatus("Label export failed: "+err.message);}
 };
 
 window.addEventListener("resize",()=>{if(S.cur>=0){fitScale();layout();}});

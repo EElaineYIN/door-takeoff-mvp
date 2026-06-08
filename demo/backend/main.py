@@ -178,5 +178,73 @@ def export(req: ExportReq):
     )
 
 
+class LabelExportReq(BaseModel):
+    job_id: str
+    pages: list[dict]   # [{page:int, boxes:[{x1,y1,x2,y2,type}]}]
+
+
+def _safe_stem(name: str, idx: int) -> str:
+    import re
+    s = re.sub(r"[^A-Za-z0-9._-]+", "_", str(name)).strip("_") or "sheet"
+    return f"{idx:03d}_{s}"
+
+
+@app.post("/api/export_labels")
+def export_labels(req: LabelExportReq):
+    """Bundle human-reviewed doors as a YOLO training set (images + labels).
+
+    Each kept/added/edited box becomes a class-0 'door' label in normalized
+    xywh — i.e. the corrections feed straight back into fine-tuning (the
+    human-in-the-loop / active-learning step).
+    """
+    import zipfile
+
+    job = JOBS.get(req.job_id)
+    if not job:
+        raise HTTPException(404, "job not found")
+
+    buf = io.BytesIO()
+    n_imgs = n_boxes = 0
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("classes.txt", "door\n")
+        for item in req.pages:
+            boxes = item.get("boxes") or []
+            if not boxes:
+                continue
+            p = next((x for x in job["pages"] if x["index"] == item.get("page")), None)
+            if not p:
+                continue
+            W, H = p["width"], p["height"]
+            lines = []
+            for b in boxes:
+                x1, x2 = sorted((float(b["x1"]), float(b["x2"])))
+                y1, y2 = sorted((float(b["y1"]), float(b["y2"])))
+                cx, cy = (x1 + x2) / 2 / W, (y1 + y2) / 2 / H
+                bw, bh = (x2 - x1) / W, (y2 - y1) / H
+                lines.append(f"0 {cx:.6f} {cy:.6f} {bw:.6f} {bh:.6f}")
+            stem = _safe_stem(p.get("sheet") or p["name"], p["index"])
+            z.writestr(f"labels/{stem}.txt", "\n".join(lines) + "\n")
+            img_path = job["dir"] / p["file"]
+            if img_path.exists():
+                z.write(str(img_path), f"images/{stem}.png")
+            n_imgs += 1
+            n_boxes += len(lines)
+        z.writestr("README.txt",
+                   "Human-reviewed door labels exported from the Door Takeoff demo.\n"
+                   f"{n_imgs} sheet(s), {n_boxes} verified door box(es).\n\n"
+                   "Format: YOLO (class cx cy w h, normalized). class 0 = door.\n"
+                   "images/  - the reviewed sheet renders\n"
+                   "labels/  - matching YOLO label files\n"
+                   "classes.txt - class names\n\n"
+                   "Add these to the training set and re-run fine-tuning so the\n"
+                   "detector learns from the reviewer's corrections.\n")
+    buf.seek(0)
+    return StreamingResponse(
+        iter([buf.getvalue()]),
+        media_type="application/zip",
+        headers={"Content-Disposition": "attachment; filename=review_labels.zip"},
+    )
+
+
 # serve frontend at /
 app.mount("/", StaticFiles(directory=str(FRONTEND), html=True), name="frontend")
